@@ -1,0 +1,7 @@
+
+
+/*background image css*/
+body {
+    background-image: url("public_html/documentation/Green CR.jpg");
+background-size: cover;
+}
