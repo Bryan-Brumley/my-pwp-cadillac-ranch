@@ -1,0 +1,71 @@
+
+
+/*background image css*/
+.amarillo {
+    background-image: url("../documentation/Green CR.jpg");
+background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+ @media only screen:(max-width:768px) {
+     h1 {
+         font-family: "cadillac regular";
+         /*font-size: 10em;*/
+         align-items: center;
+     }
+ }
+
+
+
+
+
+
+
+.amarillo-texas {
+    font-family: "ui-monospace" ;
+    font-size: 20px;
+    margin-bottom: -0.5em;
+}
+
+.EST {
+    font-family: "cadillac regular" ;
+    font-size: 20px;
+    padding-top: .7em;
+
+
+}
+
+.hours {
+    font-size: 20px;
+}
+
+
+
+img[src="image/hairy.jpg"] {
+    width:200px;
+    height:200px;
+    float: right;
+    padding-left: 1em;
+}
+img[src="image/halo.jpg"] {
+    width:200px;
+    height:200px;
+    float: right;
+}
+
+img[src="image/slug.jpg"] {
+    width:200px;
+    height:200px;
+    float: right;
+    padding-right: 1em;}
+
+img[src="image/logo.png"] {
+    width:200px;
+    height:200px;
+    float: right;
+    margin-right: 200px;
+    padding-top: 3em;
+}
+
