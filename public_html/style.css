@@ -2,20 +2,12 @@
 
 /*background image css*/
 .amarillo {
-    background-image: url("../documentation/Green CR.jpg");
-background-size: cover;
+    background-image: url("documentation/Green CR.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 
-}
-
- @media only screen:(max-width:768px) {
-     h1 {
-         font-family: "cadillac regular";
-         /*font-size: 10em;*/
-         align-items: center;
-     }
- }
+#map { height: 180px; }
 
 
 

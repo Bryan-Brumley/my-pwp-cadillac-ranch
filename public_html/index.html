@@ -11,9 +11,25 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""
+    />
 
+    <script
+            src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""
+    ></script>
 
-
+    <style>
+		#map {
+			width: 100%;
+			height: 550px;
+		}
+    </style>
 </head>
 
 <body>
@@ -55,9 +71,15 @@
             <h2>DIRECTIONS</h2>
         </div>
     </div>
+<div id="map"></div>
+<script>
+    var map = L.map('map',{scrollWheelZoom:false}).setView([35.187233033008205, -101.98704880677191], 15);
 
-
-
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    var marker = L.marker([35.187233033008205, -101.98704880677191]).addTo(map);
+</script>
                     <h2>GALLERY</h2>
 
 
@@ -69,20 +91,20 @@
                     <div class="columns">
                         <div class="columns__item">
                             <figure>
-                                <img src="image/lume.jpg"/>
+                                <img src="../src/image/lume.jpg"/>
 
                             </figure>
                         </div>
                         <div class="columns__item">
                             <figure>
-                                <img src="image/sunset.jpg"/>
+                                <img src="../src/image/sunset.jpg"/>
 
                             </figure>
                         </div>
                     </div>
 <div class="columns"></div>
                         <div class="columns__item">
-                            <img src="image/sky.jpg"/>
+                            <img src="../src/image/sky.jpg"/>
                             </figure>
                         </div>
                         <div class="history"></div>
@@ -109,20 +131,20 @@
                                                 <div class="columns">
                                                     <div class="columns__item">
                                                         <figure>
-                                                            <img src="image/hairy.jpg"/>
+                                                            <img src="../src/image/hairy.jpg"/>
 
                                                         </figure>
                                                     </div>
                                                 </div>
                                                 <div class="columns">
                                                     <div class="columns__item">
-                                                        <img src="image/halo.jpg"/>
+                                                        <img src="../src/image/halo.jpg"/>
                                                         </figure>
                                                     </div>
                                                 </div>
                                                 <div class="columns">
                                                     <div class="columns__item">
-                                                        <img src="image/slug.jpg"/>
+                                                        <img src="../src/image/slug.jpg"/>
                                                         </figure>
                                                     </div>
                                                 </div>
@@ -158,7 +180,7 @@
 
 
                                                 <div class="col">
-                                                    <img src="image/logo.png"/>
+                                                    <img src="../src/image/logo.png"/>
                                                     <div class="row">
                                                         <div class="col-sm-6">
                                                             <div id="ContactFormDiv"></div>
@@ -172,9 +194,86 @@
                                                             <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
 
 
+<!--BEGIN CONTACT FORM-->
+<h2>CONTACT US</h2>
+<form action="./apis" id="contact" method="post" novalidate>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+            </div>
+            <input class="form-control" id="name" name="name" placeholder="Your Name" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+            </div>
+            <input class="form-control" id="email" name="email" placeholder="Your Email" type="email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="subject">Subject</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+            </div>
+            <input class="form-control" id="subject" name="subject" placeholder="Subject" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-comment"></i></span>
+            </div>
+            <textarea class="form-control" id="message" maxlength="2000" name="message"
+                      placeholder="Your Message (2000 characters max)" required
+                      rows="5"></textarea>
+        </div>
+    </div>
+    <!-- Make sure to add site key provided by google recaptcha -->
+    <div class="g-recaptcha" data-sitekey="6LcoxyodAAAAAF89M-pHOmJs8MT1h7iVNj1gMD94"></div>
+    <button class="btn btn-info" type="submit">Submit</button>
+    <button class="btn btn-default" type="reset">Reset</button>
+</form>
+<!-- END CONTACT FORM-->
+<div id="output-area"></div>
+
+</div><!-- /.col-sm-6 -->
+</div><!-- /.row -->
+</main>
+</div>
+
+<footer class="py-4 text-white">
+    <div class="container">
+        <a class="text-white" href="https://bootcamp-coders.cnm.edu/class-materials/jquery-validated-captcha-form/"
+           target="_blank">Documentation</a> | <a class="text-white" href="https://github.com/rlewis2892/pwp-form-demo"
+                                                  target="_blank">GitHub</a>
+    </div>
+</footer>
 
 
 
+
+
+
+
+
+
+
+<script crossorigin="anonymous" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA="
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-F6h55Qw6sweK+t7SiOJX+2bpSAa3b/fnlrVCJvmEj1A="
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-0Yg/eibVdKyxkuVo1Qwh0DspoUCHvSbm/oOoYVz32BQ="
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+
+
+<script src="/documentation/script.js"></script>
 
 </body>
 </html>
