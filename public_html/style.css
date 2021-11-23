@@ -11,10 +11,10 @@
 
 
 #map { height: 180px; }
-
-
-div {
+/*ANYTHING I DO HERE JUST TAKES THE FOT AWAY!*/
+{
     font-family: cadillac regular;
+
 }
 
 p.history {font-family: JetBrains Mono ExtraBold;
