@@ -2,21 +2,27 @@
 
 /*background image css*/
 .amarillo {
-    background-image: url("documentation/Green CR.jpg");
+    background-image: url("image/Green CR.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+}
+
+
 
 #map { height: 180px; }
 
 
+div {
+    font-family: cadillac regular;
+}
 
-
-
+p.history {font-family: JetBrains Mono ExtraBold;
+}
 
 
 .amarillo-texas {
-    font-family: "ui-monospace" ;
+    font-family: "cadillac regular" ;
     font-size: 20px;
     margin-bottom: -0.5em;
 }
@@ -32,20 +38,40 @@
 .hours {
     font-size: 20px;
 }
+img[src="image/lume.jpg"] {
+    width: 49.5%;
+    height: 500px;
+    float: left;
+
+}
 
 
+img[src="image/halo.jpg"] {
+    width:49.5%;
+    height:500px;
+    float: right;
+    lightbox-enabled (true)
+}
+
+img[src="image/sunset.jpg"] {
+    width: 49.5%;
+    height: 500px;
+    float: left;
+}
+
+img[src="image/sky.jpg"] {
+    width: 49.5%;
+    height: 500px;
+    float: right;
+}
 
 img[src="image/hairy.jpg"] {
-    width:200px;
-    height:200px;
+    width:50px;
+    height:100px;
     float: right;
     padding-left: 1em;
 }
-img[src="image/halo.jpg"] {
-    width:200px;
-    height:200px;
-    float: right;
-}
+
 
 img[src="image/slug.jpg"] {
     width:200px;
@@ -60,4 +86,6 @@ img[src="image/logo.png"] {
     margin-right: 200px;
     padding-top: 3em;
 }
+
+/*<!--contact for css-->*/
 

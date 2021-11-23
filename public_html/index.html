@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="initial-scale=15">
+
+
+
     <title>Cadillac Ranch</title>
 
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin=""
-    />
+
+    <link rel="stylesheet" href="style.css">
 
     <script
             src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
@@ -84,27 +81,31 @@
 
 
                     <!-- JavaScript Bundle with Popper -->
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                            crossorigin="anonymous"></script>
+
 
                     <div class="columns">
                         <div class="columns__item">
                             <figure>
-                                <img src="../src/image/lume.jpg"/>
+                                <img src="image/lume.jpg"/>
 
                             </figure>
                         </div>
                         <div class="columns__item">
                             <figure>
-                                <img src="../src/image/sunset.jpg"/>
+                                <img src="image/halo.jpg"/>
+
+                            </figure>
+                        </div>
+                        <div class="columns__item">
+                            <figure>
+                                <img src="image/sunset.jpg"/>
 
                             </figure>
                         </div>
                     </div>
 <div class="columns"></div>
                         <div class="columns__item">
-                            <img src="../src/image/sky.jpg"/>
+                            <img src="image/sky.jpg"/>
                             </figure>
                         </div>
                         <div class="history"></div>
@@ -114,8 +115,8 @@
                                         <h2>History</h2>
                                         <h3>OUR STORY</h3>
 
-                                                <div class="story">
-                                                    <p>Chip Lord and Doug Michels were architects; Marquez was an art
+                                                <div id="story">
+                                                    <p class="history">Chip Lord and Doug Michels were architects; Marquez was an art
                                                         student at Tulane University in New Orleans, Louisiana.
                                                         According to Chip Lord, "Ant Farm was founded as an alternative
                                                         architectural practice, kind of an experiment in an attempt to
@@ -131,23 +132,14 @@
                                                 <div class="columns">
                                                     <div class="columns__item">
                                                         <figure>
-                                                            <img src="../src/image/hairy.jpg"/>
+                                                            <img src="image/hairy.jpg"/>
 
                                                         </figure>
                                                     </div>
                                                 </div>
-                                                <div class="columns">
-                                                    <div class="columns__item">
-                                                        <img src="../src/image/halo.jpg"/>
-                                                        </figure>
-                                                    </div>
+
                                                 </div>
-                                                <div class="columns">
-                                                    <div class="columns__item">
-                                                        <img src="../src/image/slug.jpg"/>
-                                                        </figure>
-                                                    </div>
-                                                </div>
+
                                                 <p class="wrap">The group claims to have been given a list of eccentric
                                                     millionaires in 1972 in San Francisco, identifying Stanley Marsh 3
                                                     of Amarillo amongst those who might be able to fund one of their
@@ -180,7 +172,7 @@
 
 
                                                 <div class="col">
-                                                    <img src="../src/image/logo.png"/>
+                                                    <img src="image/logo.png"/>
                                                     <div class="row">
                                                         <div class="col-sm-6">
                                                             <div id="ContactFormDiv"></div>
@@ -190,11 +182,9 @@
 
 
 
-                                                            <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-                                                            <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
 
 
-<!--BEGIN CONTACT FORM-->
+<!--CONTACT FORM-->
 <h2>CONTACT US</h2>
 <form action="./apis" id="contact" method="post" novalidate>
     <div class="form-group">
@@ -240,7 +230,7 @@
     <button class="btn btn-info" type="submit">Submit</button>
     <button class="btn btn-default" type="reset">Reset</button>
 </form>
-<!-- END CONTACT FORM-->
+<!-- END OF FORM-->
 <div id="output-area"></div>
 
 </div><!-- /.col-sm-6 -->
@@ -262,7 +252,9 @@
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 
 <script crossorigin="anonymous" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA="
@@ -275,7 +267,7 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
-<script src="/documentation/script.js"></script>
+<script src="./script.js"></script>
 
 </body>
 </html>
