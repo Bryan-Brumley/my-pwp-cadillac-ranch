@@ -9,7 +9,7 @@ const Mailgun=require("mailgun.js")
 const formData = require("form-data")
 const Recaptcha = require("express-recaptcha").RecaptchaV2
 
-require("dotenv").config()
+
 
 const app = express()
 const mailgun = new Mailgun(formData)
@@ -65,7 +65,7 @@ const handlePostRequest = (request, response, next) => {
 
     const {email, subject, name, message} = request.body
 
-    mailgunClient.messages.create(
+    mailGunClient.messages.create(
         process.env.MAILGUN_DOMAIN,
         {to: process.env.MAILGUN_RECIPIENT,
         from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,

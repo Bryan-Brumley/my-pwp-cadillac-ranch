@@ -6,86 +6,163 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    box-shadow: 0 10px 10px grey;
 }
 
 
 
-#map { height: 180px; }
-/*ANYTHING I DO HERE JUST TAKES THE FOT AWAY!*/
-{
-    font-family: cadillac regular;
+
+body {
+    background: #F2EFE9;
 
 }
-
-p.history {font-family: JetBrains Mono ExtraBold;
+.top-text { fontsize: 100vw;
+    padding-top: 20px;
+}
+h1 {
+    font-family:'Fugaz One';
+    text-shadow: 0px 11px 10px darkgray;
 }
 
+h2, h3, h4 {
+   font-family:'Fugaz One';
+    text-shadow: 0px 11px 10px grey;
+}
+
+label {
+    font-family:'Fugaz One';
+    text-shadow: 0px 11px 10px grey;
+}
+.g-recaptcha {
+    align: center;
+}
 
 .amarillo-texas {
-    font-family: "cadillac regular" ;
-    font-size: 20px;
+    font-size: 28;
     margin-bottom: -0.5em;
+    font-size: clamp(25px, 1vw, 20px);
+
+
 }
 
 .EST {
-    font-family: "cadillac regular" ;
-    font-size: 20px;
-    padding-top: .7em;
-
-
-}
-
-.hours {
-    font-size: 20px;
-}
-img[src="image/lume.jpg"] {
-    width: 49.5%;
-    height: 500px;
-    float: left;
+    font-size: 9px;
+    padding-top: .9em;
+    font-size: clamp(20px, 1vw, 20px);
 
 }
 
 
-img[src="image/halo.jpg"] {
-    width:49.5%;
-    height:500px;
-    float: right;
-    lightbox-enabled (true)
+
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
-img[src="image/sunset.jpg"] {
-    width: 49.5%;
-    height: 500px;
-    float: left;
+html {
+    box-sizing: border-box;
+    font-size: clamp(5.5rem, 10vw, 4rem);
+    text-align: center;
+
 }
 
-img[src="image/sky.jpg"] {
-    width: 49.5%;
-    height: 500px;
-    float: right;
+body {
+    color: #050203;
+
 }
 
-img[src="image/hairy.jpg"] {
-    width:50px;
-    height:100px;
-    float: right;
-    padding-left: 1em;
+.container {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 1rem;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    box-shadow: 0 10px 10px grey;
+
+}
+
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    box-shadow: 0 10px 10px grey;
+
+}
+
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    box-shadow: 0 10px 10px grey;
+
+}
+
+.gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    box-shadow: 0 10px 10px grey;
+
+}
+
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    box-shadow: 0 10px 10px grey;
+
+}
+
+.gallery__item--6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    box-shadow: 0 10px 10px grey;
+
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+#story {
+    font-family: "Fugaz One";
+    text-shadow: 2px 2px grey;
 }
 
 
-img[src="image/slug.jpg"] {
-    width:200px;
-    height:200px;
-    float: right;
-    padding-right: 1em;}
 
-img[src="image/logo.png"] {
-    width:200px;
-    height:200px;
-    float: right;
-    margin-right: 200px;
-    padding-top: 3em;
-}
+#
 
 /*<!--contact for css-->*/
 

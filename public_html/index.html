@@ -3,35 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Cadillac Ranch</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
-
-    />
     <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
-    <script
-            src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-            crossorigin=""
-    ></script>
 
-    <style>
-		#map {
-			width: 100%;
-			height: 550px;
-		}
-    </style>
+
+
 </head>
 
 <body>
@@ -47,156 +34,117 @@
 
     </div>
     <div class="text-center pt-0 row amarillo-texas">
-        <h2 class="amarillo-texas my-flex-item">AMARILLO, TEXAS</h2>
+        <h1 class="amarillo-texas my-flex-item">AMARILLO, TEXAS</h1>
     </div>
     <div class="text-center pt-0 row">
 
-        <h2 class="EST est-1974 my-flex-item">EST: 1974</h2>
+        <h1 class="EST est-1974 my-flex-item">EST: 1974</h1>
     </div>
 
 </div>
-<div class="merchTrailerHours">
-    <div class="text-center container">
-        <div class="row">
-            <div class="col"></div>
-                <h3>MERCH TRAILER HOURS</h3>
-            </div>
-        </div>
-    </div>
+
     <div class="text-center">
         <div class="row">
             <div class="col">
-                <h3 class="hours">9am - 6pm Wednesday - Sunday</h3>
+                <h3 class="hours">COME OUT AND LEAVE YOUR MARK!</h3>
             </div>
         </div>
     </div>
 
     <div class="text-center container">
         <div class="col">
-            <h2>DIRECTIONS</h2>
+            <h2>13651 I-40 Frontage Rd, Amarillo, TX 79124</h2>
         </div>
     </div>
-<div id="map"></div>
+
+<div id = "map" style = "width: 100%; height: 600px"></div>
 <script>
-    var map = L.map('map',{scrollWheelZoom:false}).setView([35.187233033008205, -101.98704880677191], 15);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    var marker = L.marker([35.187233033008205, -101.98704880677191]).addTo(map);
+    var mapOptions = {
+        center: [35.18723384017835, -101.98705329608335],
+        zoom: 11
+    }
+
+    var map = new L.map('map', mapOptions);
+
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+
+    map.addLayer(layer);
+
+    //Map pin
+    var marker = new L.Marker([35.18723384017835, -101.98705329608335]);
+    marker.addTo(map);
+    marker.bindPopup('WELCOME TO THE CADILLAC RANCH!').openPopup();
+    marker.addTo(map);
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    map.addLayer(layer);
+    var scale = L.control.scale();
+    scale.addTo(map);
+    map.scrollWheelZoom.disable();
 </script>
-                    <h2>GALLERY</h2>
 
 
-                    <!-- JavaScript Bundle with Popper -->
+
+<h2>GALLERY</h2>
+<div class="container">
+    <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+            <img src="image/halo.jpg" alt="Gallery image 1" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+            <img src="image/sunset.jpg" alt="Gallery image 2" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+            <img src="image/best.jpg" alt="Gallery image 3" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+            <img src="image/lume.jpg" alt="Gallery image 4" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+            <img src="image/aerial.jpg" alt="Gallery image 5" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+            <img src="image/snow.jpg" alt="Gallery image 6" class="gallery__img">
+        </figure>
+    </div>
+</div>
 
 
-                    <div class="columns">
-                        <div class="columns__item">
-                            <figure>
-                                <img src="image/lume.jpg"/>
 
-                            </figure>
-                        </div>
-                        <div class="columns__item">
-                            <figure>
-                                <img src="image/halo.jpg"/>
 
-                            </figure>
-                        </div>
-                        <div class="columns__item">
-                            <figure>
-                                <img src="image/sunset.jpg"/>
-
-                            </figure>
-                        </div>
-                    </div>
-<div class="columns"></div>
-                        <div class="columns__item">
-                            <img src="image/sky.jpg"/>
-                            </figure>
-                        </div>
                         <div class="history"></div>
                             <div class="text-center container"></div>
                                 <div class="row"></div>
                                     <div class="col"></div>
-                                        <h2>History</h2>
-                                        <h3>OUR STORY</h3>
+                                        <h2>OUR STORY</h2>
 
                                                 <div id="story">
-                                                    <p class="history">Chip Lord and Doug Michels were architects; Marquez was an art
-                                                        student at Tulane University in New Orleans, Louisiana.
-                                                        According to Chip Lord, "Ant Farm was founded as an alternative
-                                                        architectural practice, kind of an experiment in an attempt to
-                                                        subvert normal corporate ways of doing architecture."[2]
-                                                        According to Marquez, "Chip and I were living in the mountains
-                                                        north of San Francisco, and there was a book meant for kids left
-                                                        in a bar near where we lived. It was called ‘The Look of
-                                                        Cars,’[3] and there was something on the rise and fall of the
-                                                        tail fin. I didn't have a lot to do, so I just sorta drew it up.
-                                                        I’ve always loved the Cadillacs."[2]</p>
+                                                    <p class="history">
+                                                        In 1974, three artists from San Francisco found themselves in Potter County, Texas, burying ten Cadillacs nose first into a Texas wheat field alongside Interstate 40, an art installation that would eventually come to be known as Cadillac                                                            Ranch. Becoming one of the most celebrated roadside landmarks in the country. In 1974. People would stop along the highway, walk out to view the cars, then deface them or rip off pieces as souvenirs. Stanley Marsh 3 and The Ant Farm were                                                            tolerant of this public deconstruction of their art although it doomed the tail fins but they eventually came to encourage it. Despite the art being in an open field, for some, the Cadillac Ranch experience is very personal. Travelers near                                                          and far venture to view the public art and while visiting it, the piece seems to lend travelers a “sense of privacy and anonymity.” When stepping foot on the field, you’ll more than likely hear a mix of languages from French and German to                                                           British English being spoken, it’s one of the most linguistically diverse places to visit next to the United Nations, atleast until COVID that is. Cadillac Ranch is located on the south side of the I-40 Frontage Road between exits 60 and 62.                                                        It’s not particularly well marked, but Google Maps and GPS will provide you with adequate Cadillac Ranch directions. The line of parked cars and other visitors will lead you the rest of the way to this quirky roadside attraction in the middle                                                       of a Texas cow pasture. Cadillac Ranch is visible from the highway, and though located on private land, visiting it (by driving along a frontage road and entering the pasture by walking through an unlocked gate) is tacitly encouraged.
+                                                        rough an unlocked gate) is tacitly
+                                                        encouraged.
+                                                    </p>
                                                 </div>
 
-                                                <div class="columns">
-                                                    <div class="columns__item">
-                                                        <figure>
-                                                            <img src="image/hairy.jpg"/>
-
-                                                        </figure>
-                                                    </div>
-                                                </div>
-
-                                                </div>
-
-                                                <p class="wrap">The group claims to have been given a list of eccentric
-                                                    millionaires in 1972 in San Francisco, identifying Stanley Marsh 3
-                                                    of Amarillo amongst those who might be able to fund one of their
-                                                    projects and submitted it to him. Marsh's response began "It's going
-                                                    to take me awhile to get used to the idea of the Cadillac Ranch.
-                                                    I'll answer you by April Fool's Day. It's such an irrelevant and
-                                                    silly proposition that I want to give it all my time and attention
-                                                    so I can make a casual judgment of it."[4]Cadillac Ranch was
-                                                    originally located in a wheat field, but in 1997, the installation
-                                                    was quietly moved by a local contractor to a location two miles
-                                                    (three kilometers) to the west, to a cow pasture along Interstate
-                                                    40, in order to place it farther from the limits of the growing
-                                                    city.[5] Both sites belonged to the local millionaire Stanley Marsh
-                                                    3, the patron of the project.[6] Marsh was well known in the city
-                                                    for his longtime patronage of artistic endeavors including the
-                                                    Cadillac Ranch; Floating Mesa; Amarillo Ramp, a work by land artist
-                                                    Robert Smithson; and a series of fake traffic signs throughout the
-                                                    city known collectively as the Dynamite Museum.[7] As of 2013,
-                                                    Stanley Marsh 3 did not own the Cadillac Ranch;[8] ownership appears
-                                                    to have been transferred to a family trust some time before his June
-                                                    2014 death.
-                                                    Cadillac Ranch is visible from the highway, and though located on
-                                                    private land, visiting it (by driving along a frontage road and
-                                                    entering the pasture by walking through an unlocked gate) is tacitly
-                                                    encouraged. In addition, writing graffiti on or otherwise
-                                                    spray-painting the vehicles is now encouraged, and the vehicles,
-                                                    which have long since lost their original colors, are wildly
-                                                    decorated. Ant Farm artists have encouraged this kind of public
-                                                    interaction with the cars.</p>
+<div class="col-1">
+    <img src="image/logo.png"/>
+</div>
 
 
-                                                <div class="col">
-                                                    <img src="image/logo.png"/>
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <div id="ContactFormDiv"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
 
 
 
 
 <!--CONTACT FORM-->
-<h2>CONTACT US</h2>
-<form action="./apis" id="contact" method="post" novalidate>
+<section class="contact-form">
+    <div class="container-fluid">
+
+<form action="./apis/" id="contact" method="post" novalidate>
     <div class="form-group">
-        <label for="name">Name</label>
+        <h4>CONTACT US</h4>
+        <h4>NAME</h4>
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fa fa-user"></i></span>
@@ -238,6 +186,8 @@
     <button class="btn btn-info" type="submit">Submit</button>
     <button class="btn btn-default" type="reset">Reset</button>
 </form>
+    </div>
+</section>
 <!-- END OF FORM-->
 <div id="output-area"></div>
 
@@ -258,8 +208,8 @@
 
 
 
-
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+          integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
