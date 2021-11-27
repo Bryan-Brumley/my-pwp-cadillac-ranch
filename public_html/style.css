@@ -10,21 +10,20 @@
 }
 
 
-img.logo {
-     display: block;
-    justify-content: center;
-}
 
 body {
     background: #F2EFE9;
-
 }
-.top-text { fontsize: 100vw;
+.top-text {
+    font-size: 10vw;
     padding-top: 20px;
 }
+
 h1 {
     font-family:'Fugaz One';
+    font-size: clamp(5.5rem, 10vw, 4rem);  
     text-shadow: 0px 11px 10px darkgray;
+
 }
 
 h2, h3 {
@@ -40,22 +39,6 @@ label, h4 {
     display: inline-block;
 }
 
-.btn btn-info {
-    box-shadow:inset 0px 1px 0px 0px #f5978e;
-    background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-    background-color:#f24537;
-    border-radius:6px;
-    border:1px solid #d02718;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:6px 24px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #810e05;
-}
 
 .amarillo-texas {
     font-size: 28;
